@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+header h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+#student_form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+#student_form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#student_form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Button style (Adding one since you'll need it for JS) */
+button {
+    background-color: #2881a7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #217288;
+}
+
+/* Table Section */
+#student_details {
+    width: 50%;
+    max-width: 800px;
+    overflow-x: auto; /* Responsive scroll for small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #040404;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action Buttons (Edit/Delete) */
+.btn-edit { background: #ffc107; margin-right: 5px; }
+.btn-delete { background: #dc3545; }

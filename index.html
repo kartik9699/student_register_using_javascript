@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -12,36 +13,41 @@
         </h1>
     </header>
     <main>
+        <!-- student Registration form -->
         <section id="student_form">
             <form action="">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="student_id">Student ID</label>
-                <input type="text" id="student_id" name="student_id">
-                <label for="Email_ID">Email ID</label>
-                <input type="email" id="Email_ID" name="Email_ID">
-                <label for="contact">contact</label>
-                <input type="text" id="contact" name="contact">
+                <label for="name">Name :</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="student_id">Student ID :</label><br>
+                <input type="text" id="student_id" name="student_id"><br>
+                <label for="Email_ID">Email ID :</label><br>
+                <input type="email" id="Email_ID" name="Email_ID"><br>
+                <label for="contact">Contact :</label><br>
+                <input type="text" id="contact" name="contact"><br>
+                <button type="submit">submit</button>
             </form>
         </section>
+        <!-- student details section -->
         <section id="student_details">
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Student ID
-                </th>
-                <th>
-                    Email ID
-                </th>
-                <th>
-                    Contact No
-                </th>
-                <th>
-                    Action
-                </th>
-            </tr>
+            <table>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Student ID
+                    </th>
+                    <th>
+                        Email ID
+                    </th>
+                    <th>
+                        Contact No
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </table>  
         </section>
     </main>
 </body>
