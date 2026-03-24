@@ -95,3 +95,26 @@ tr:hover {
 /* Action Buttons (Edit/Delete) */
 .btn-edit { background: #ffc107; margin-right: 5px; }
 .btn-delete { background: #dc3545; }
+
+/* responsivenes */
+@media screen and (max-width: 640px) {
+    header h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+}
+@media screen and (max-width: 1224px) {
+main{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+#student_form{
+    width:100%;
+    
+}
+#student_details{
+    width:100%;
+}
+}
