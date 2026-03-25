@@ -19,6 +19,7 @@ function validation() {
     const contactvalue = contact.value.trim();
     const errorSpan = document.getElementById("error");
     const contactRegex = /^\d{10}$/;
+    const studentIdRegex=/^\d+$/;
     const nameRegex = /^[a-zA-Z\s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!name || !studentId || !email || !contact) {
@@ -27,6 +28,10 @@ function validation() {
     }
     else if (!nameRegex.test(name)) {
         errorSpan.innerHTML="Please enter a valid name (letters only).";
+        isValid=false;
+    }
+    else if (!studentIdRegex.test(studentId)) {
+        errorSpan.innerHTML="Please enter a valid id (numbers only).";
         isValid=false;
     }
     else if (!emailRegex.test(email)) {
