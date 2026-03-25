@@ -44,6 +44,10 @@ header h1 {
     border-radius: 4px;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+h3{
+    text-align: center;
+    font-size: 25px;
+}
 
 /* Button style (Adding one since you'll need it for JS) */
 button {
@@ -103,8 +107,6 @@ tr:hover {
 /* responsiveness */
 @media screen and (max-width: 640px) {
     header h1 {
-    color: #333;
-    margin-bottom: 20px;
     font-size: 25px;
 }
 }
