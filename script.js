@@ -8,7 +8,43 @@ const table = document.querySelector("table");
 let studentList = JSON.parse(localStorage.getItem("students")) || [];
 let idx = null;
 renderTable();
+let isValid=true;
+    // Validation Logic
+function validation() {
+    
+
+    const name = nameInput.value.trim();
+    const studentId = student_id.value.trim();
+    const email = Email_ID.value.trim();
+    const contactvalue = contact.value.trim();
+    const errorSpan = document.getElementById("error");
+    const contactRegex = /^\d{10}$/;
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!name || !studentId || !email || !contact) {
+        errorSpan.innerHTML="All fields are required!";
+        isValid=false;
+    }
+    else if (!nameRegex.test(name)) {
+        errorSpan.innerHTML="Please enter a valid name (letters only).";
+        isValid=false;
+    }
+    else if (!emailRegex.test(email)) {
+        errorSpan.innerHTML="Please enter a valid email address.";
+        isValid=false;
+    }
+    else if (!contactRegex.test(contactvalue)) {
+        errorSpan.innerHTML="Contact number must be exactly 10 digits.";
+        isValid=false;
+    }
+    else{
+        errorSpan.innerHTML="";
+        isValid=true;
+    }
+}
 submitBtn.addEventListener('click', function addtoarray() {
+    validation()
+    if(isValid){
     if(idx==null){
     const obj = {
         name: nameInput.value,
@@ -24,11 +60,15 @@ submitBtn.addEventListener('click', function addtoarray() {
         studentList[idx]['Email_ID']=Email_ID.value;
         studentList[idx]['contact']=contact.value;
     }
+    clearForm();
+    idx=null;
+    }
+    
     
     saveToLocalStorage();
     renderTable();
-    idx=null;
-    clearForm();
+    
+    
 });
 
 function renderTable() {

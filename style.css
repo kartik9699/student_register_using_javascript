@@ -67,7 +67,9 @@ button:hover {
     max-width: 800px;
     overflow-x: auto; /* Responsive scroll for small screens */
 }
-
+#error{
+    color: red;
+}
 table {
     width: 100%;
     border-collapse: collapse;
