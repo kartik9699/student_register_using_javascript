@@ -93,10 +93,12 @@ tr:hover {
 }
 
 /* Action Buttons (Edit/Delete) */
-.btn-edit { background: #ffc107; margin-right: 5px; }
-.btn-delete { background: #dc3545; }
-
-/* responsivenes */
+.btn-edit { background: #ffc107; margin-right: 3px; width: 30px; border-radius: 50%; padding: 0; height: 30px;}
+.btn-delete { background: #dc3545; width: 30px; border-radius: 50%; padding: 0;height: 30px;}
+.fa-solid{
+    font-size: 10px;
+}
+/* responsiveness */
 @media screen and (max-width: 640px) {
     header h1 {
     color: #333;
